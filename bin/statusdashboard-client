@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+/*!
+ * statusdashboard-client: a node.js statusdashboard client
+ * Copyright(c) 2012 Christophe Hamerling <christophe.hamerling@gmail.com>
+ * MIT Licensed
+ */
+
+var util  = require('util'),
+    argv = require('optimist').argv,
+    client = require('../lib/statusdashboard-client');
+
+var DashboardClient = client.DashboardClient;
+
+var help = [
+    "usage: statusdashboard-client [options] ",
+    "",
+    "Starts a statusdashboard client using the specified command-line options",
+    "",
+    "options:",
+    "  --url URL            Base URL of the statusdashboard server to connect to",
+    "  -h, --help           You're staring at it"
+].join('\n');
+
+if (argv.h || argv.help) {
+  return util.puts(help);
+}
+
+var client = new DashboardClient(argv.url);
+client.connect();

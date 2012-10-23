@@ -1,0 +1,40 @@
+{
+  "name": "statusdashboard-client",
+  "version": "0.0.1",
+  "description": "A statusdashboard client",
+  "author": "Christophe Hamerling <christophe.hamerling@gmail.com>",
+  "homepage": "http://github.com/chamerling/statusdashboard-client",
+  "keywords": [
+    "node", "client", "monitoring", "statusdashboard"
+  ],
+  "maintainers": [{
+    "name": "Christophe Hamerling",
+    "email": "christophe.hamerling@gmail.com"
+  }],
+  "contributors": [],
+  "licenses": [{
+    "type": "MIT",
+    "url": "http://mths.be/mit"
+  }],
+  "bugs": {
+    "url": "https://github.com/chamerling/statusdashboard-client/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/chamerling/statusdashboard-client.git"
+  },
+  "engines": {
+    "node": "0.6.x",
+    "npm": "1.0.x"
+  },
+  "dependencies": {
+    "socket.io-client": "0.9.10",
+    "colors": "0.6.0-1",
+    "underscore": "1.4.0",
+    "string": "1.1.0",
+    "optimist": "0.3.x"
+  },
+  "bin": {
+    "statusdashboard-client": "./bin/statusdashboard-client"
+  }
+}
